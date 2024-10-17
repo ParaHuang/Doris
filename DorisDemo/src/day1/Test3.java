@@ -7,7 +7,7 @@ public class Test3 {
 		/*
 		 	//limit times of loop
 		 	//1.we know how many times exactly						->for
-			//2.we know how many times exactly, but it will stop	->while
+			//2.we don't know how many times exactly, but it will stop	->while
 
 
 
