@@ -29,6 +29,25 @@ public class App {
 		System.out.println("you lost");
 	}
 	
+	//generate 10 random long number,and return them
+	//1 parameter: the initial value
+	public long[] lcg(long init){
+		long[] arr = new long[10];
+		arr[0] = init;
+		//loop to access every element of the array
+//		for(int i=0 ; i<arr.length ; i++) {
+//			arr[i]
+//		}
+		long a = (long)Math.pow(2, 31);
+		long c = 1103515245;
+		long m = 12345;
+		
+		for(int i=1 ; i<arr.length ; i++) {
+			arr[i] = (a*arr[i-1]+c)%m;
+		}
+		return arr;
+	}
+	
 	
 	public static void main(String[] args) {
 		App app = new App();
