@@ -12,6 +12,28 @@ public class Book {
 	private String type;
 	private String author;
 	
+	//constructor: a special method, use it to initialize fields
+	//1. it has no concept about returning type, the name is same as class name
+	//2. when we instantiate an object, that's using the constructor
+	//3. every class has an invisible/default constructor    public Book(){}
+	//4. the moment you write a constructor by yourself, then the invisible one disappear
+	public Book(String n,double p,String t,String a) {
+		System.out.println("calling constructor");
+		name = n;
+		price = p;
+		type = t;
+		author = a;
+	}
+	//method overloading:methods have same name but different parameters(1.different amount   2.different type)
+	public Book(String n) {
+		name = n;
+	}
+	public Book(String n,double p) {
+		name = n;
+		price = p;
+	}
+	
+	
 	//assign/set a value--> setters  -> setSomething
 	//to set a value for name -> 
 	public void setName(String n) {
@@ -27,9 +49,14 @@ public class Book {
 			price = p;
 		}
 	}
-	public void setType(String t) {
-		type = t;
+	
+	//when local variable is in the same name as global variable
+	//use this.variableName to refer the global one
+	//when there is no name conflict, ten you can emit this.
+	public void setType(String type) {
+		this.type = type;
 	}
+	
 	public void setAuthor(String a) {
 		author = a;
 	}
